@@ -15,7 +15,7 @@
 
 #include "lv_conf.h"
 
-
+#define LV_LVGL_H_INCLUDE_SIMPLE 1
 
 /*********************
  * DELAY INTERFACE
