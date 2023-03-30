@@ -1,9 +1,0 @@
-/home/zpf/software/iotjs-core/lvgl-8.2.0/build/CMakeFiles/install/strip.dir
-/home/zpf/software/iotjs-core/lvgl-8.2.0/build/CMakeFiles/install/local.dir
-/home/zpf/software/iotjs-core/lvgl-8.2.0/build/CMakeFiles/install.dir
-/home/zpf/software/iotjs-core/lvgl-8.2.0/build/CMakeFiles/list_install_components.dir
-/home/zpf/software/iotjs-core/lvgl-8.2.0/build/CMakeFiles/rebuild_cache.dir
-/home/zpf/software/iotjs-core/lvgl-8.2.0/build/CMakeFiles/lvgl_demos.dir
-/home/zpf/software/iotjs-core/lvgl-8.2.0/build/CMakeFiles/edit_cache.dir
-/home/zpf/software/iotjs-core/lvgl-8.2.0/build/CMakeFiles/lvgl_examples.dir
-/home/zpf/software/iotjs-core/lvgl-8.2.0/build/CMakeFiles/lvgl.dir
