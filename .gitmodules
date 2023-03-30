@@ -1,0 +1,9 @@
+[submodule "depends/quickjs"]
+	path = depends/quickjs
+	url = https://github.com/bellard/quickjs.git
+[submodule "depends/lvgl"]
+	path = depends/lvgl
+	url = https://github.com/lvgl/lvgl.git
+[submodule "depends/lv_drivers"]
+	path = depends/lv_drivers
+	url = https://github.com/lvgl/lv_drivers.git
