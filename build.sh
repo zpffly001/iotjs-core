@@ -1,24 +1,29 @@
-# # quickjs
-# cd quickjs && make
+# # 编译quickjs
+# cp modified/quickjs/* depends/quickjs/
+# cd depends/quickjs/
+# make
+# gcc -shared -fPIC -o libquickjs.so .obj/quickjs.o .obj/libregexp.o .obj/libunicode.o .obj/cutils.o .obj/quickjs-libc.o .obj/libbf.o
+# cp libquickjs.so ../../lib/dynamic
+# cp libquickjs.a ../../lib/static
+# cd ../../
 
-# # lv_binding_js
-# cd lv_binding_js && git submodule update --init --recursive && npm install && npm audit fix && make dev-x86
 
-
-# 编译lvgl
+# # 编译lvgl
+# cd depends/lvgl/
+# git checkout release/v8.3
+# mkdir -p build && cd build && cmake ..
+# make
+# cp ./lib/liblvgl.a ../../../lib/static
+# cd ../../../
 
 
 # 编译lv_drivers
-
-
-# 编译quickjs
-cp modified/quickjs/* depends/quickjs/
-cd depends/quickjs/
+cd depends/lv_drivers/
+git checkout release/v8.2
+mkdir -p build && cd build && cmake ..
 make
-gcc -shared -fPIC -o libquickjs.so .obj/quickjs.o .obj/libregexp.o .obj/libunicode.o .obj/cutils.o .obj/quickjs-libc.o .obj/libbf.o
-cp libquickjs.so ../../lib/dynamic
-cp libquickjs.a ../../lib/static
-cd ../../
+cp ./lib/liblv_drivers.a ../../../lib/static
+cd ../../../
 
 
 
