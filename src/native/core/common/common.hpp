@@ -3,9 +3,8 @@ extern "C" {
     #include "quickjs/quickjs.h"
     #include "quickjs/quickjs-libc.h"
     #include "djs.h"
-    #include "global.h"
 };
-
+#include "global.hpp"
 #include <vector>
 #include <string>
 #include <stdint.h>

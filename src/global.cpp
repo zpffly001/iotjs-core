@@ -1,7 +1,4 @@
-#include <stdlib.h>
-#include "quickjs/quickjs.h"
-#include "djs.h"
-#include "global.h"
+#include "global.hpp"
 
 #define NativeObject "NativeObject"
 
@@ -20,4 +17,5 @@ BOOL GlobalObjectInit (JSContext *ctx) {
     JS_SetProperty(ctx, globalObj, global_obj_atom, nativeObject);
     JS_FreeValue(ctx, globalObj);
     JS_FreeAtom(ctx, global_obj_atom);
+    return 0;
 }
