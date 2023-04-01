@@ -46,21 +46,21 @@
 #define CONFIG_BIGNUM 1
 #define CONFIG_VERSION 2021-03-27
 
-#include "lvgl.h"
+#include "lvgl/lvgl.h"
 #include "lv_drivers/display/monitor.h"
 #include "lv_drivers/indev/mouse.h"
 #include "lv_drivers/indev/keyboard.h"
 #include "lv_drivers/indev/mousewheel.h"
-
-#include "cutils.h"
-#include "quickjs-libc.h"
-#include "quickjs.h"
-#include "global.h"
-
-
+#include "quickjs/cutils.h"
+#include "quickjs/quickjs-libc.h"
+#include "quickjs/quickjs.h"
 #include "native/app/app.hpp"
 #include "native/components/component.hpp"
 #include "native/simulator/simulator.hpp"
+
+#include "util.h"
+#include "global.hpp"
+
 
 
 
@@ -635,10 +635,8 @@ static void DjsRunLoop(JSContext *ctx)
     for (;;) {
         lv_timer_handler();
         err = JS_ExecutePendingJob(JS_GetRuntime(ctx), &ctx1);
-        if (err <= 0) {
-            if (err < 0) {
-                SJSDumpError(ctx1);
-            }
+        if (err < 0) {
+            DJSDumpError(ctx1);
         }
     }
 }
