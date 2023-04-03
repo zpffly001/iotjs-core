@@ -8,7 +8,7 @@ add_library(lvgl_drivers ALIAS lv_drivers)
 add_library(lvgl::drivers ALIAS lv_drivers)
 
 # 写上自己的lvgl源码路径
-include_directories("/home/zpf/software/")
+include_directories("../")
 
 target_include_directories(lv_drivers SYSTEM PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
